@@ -59,7 +59,7 @@ static const char* eww[] = { "eww", "open" , "eww", NULL };
 
 static const Launcher launchers[] = {
     /* command     name to display */
-    { eww,         "" },
+    { eww,         "" },
 };
 
 static const int tagschemes[] = {
@@ -113,6 +113,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define ALTKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
     { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
     { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -140,7 +141,18 @@ static Key keys[] = {
     {MODKEY,                            XK_u,       spawn,
         SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
-    { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
+    { ALTKEY,                           XK_F1,       spawn,          
+        SHCMD("/home/vuwfxr/dotfiles/xrdwm/rofi/bin/launcher") },
+    { ALTKEY,                           XK_p,       spawn,          
+        SHCMD("/home/vuwfxr/dotfiles/xrdwm/rofi/bin/screenshot") },
+    { ALTKEY,                           XK_m,       spawn,          
+        SHCMD("/home/vuwfxr/dotfiles/xrdwm/rofi/bin/mpd") },
+    { ALTKEY,                           XK_n,       spawn,          
+        SHCMD("/home/vuwfxr/dotfiles/xrdwm/rofi/bin/network_menu") },
+    { ALTKEY,                           XK_x,       spawn,          
+        SHCMD("/home/vuwfxr/dotfiles/xrdwm/rofi/bin/powermenu") },
+    { MODKEY|ALTKEY,                    XK_s,       spawn,          
+        SHCMD("/home/vuwfxr/dotfiles/xrdwm/rofi/bin/asroot") },
     { MODKEY,                           XK_Return,  spawn,            SHCMD("st")},
 
     // toggle stuff
