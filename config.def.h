@@ -175,8 +175,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask,                 XK_o,       setcfact,       {.f =  0.00} },
 
 
-    { MODKEY|ShiftMask,                 XK_j,       movestack,      {.i = +1 } },
-    { MODKEY|ShiftMask,                 XK_k,       movestack,      {.i = -1 } },
+    { MODKEY|ShiftMask,                 XK_j,       movestack,      {.i = 0 } },
+    { MODKEY|ShiftMask,                 XK_k,       movestack,      {.i = 0 } },
     { MODKEY|ShiftMask,                 XK_Return,  zoom,           {0} },
     { MODKEY,                           XK_Tab,     view,           {0} },
 
