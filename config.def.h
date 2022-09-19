@@ -28,7 +28,7 @@ static const int scalepreview       = 4;
 static const int tag_preview        = 0;        /* 1 means enable, 0 is off */
 static const int colorfultag        = 1;        /* 0 means use SchemeSel for selected non vacant tag */
 
-static const char *fonts[]          = {"Iosevka:style:medium:size=12" ,"JetBrainsMono Nerd Font:style:medium:size=11",
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:style:medium:size=11", "Iosevka:style Nerd Font:medium:size=12",
                                         "Material Design Icons Desktop:size=11" };
 
 // theme
