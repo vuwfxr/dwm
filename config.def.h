@@ -79,6 +79,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     iscentered   isfloating   monitor */
     { "Gimp",     NULL,       NULL,       0,            0,           1,           -1 },
     { "Firefox",  NULL,       NULL,       1 << 8,       0,           0,           -1 },
+    { "Pavucontrol",  NULL,       NULL,       1 << 8,       1,           1,           -1 },
     { "eww",      NULL,       NULL,       0,            0,           1,           -1 },
 };
 
@@ -226,7 +227,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask,                 XK_w,       setborderpx,    {.i = default_border } },
 
     // kill dwm
-    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall bar.sh dwm") },
+    { MODKEY|ControlMask,               XK_q,       spawn,        SHCMD("killall dwm") },
 
     // kill window
     { MODKEY,                           XK_q,       killclient,     {0} },
